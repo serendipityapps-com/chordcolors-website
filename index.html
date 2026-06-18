@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta content="true" name="HandheldFriendly"/>
-  <link href="https://chordcolors.com/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-  <link href="https://chordcolors.com/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-  <link href="https://chordcolors.com/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link rel="icon" href="./images/icon-small.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icon-small.png">
   <title>Chord Colors App</title>
   <script type="application/ld+json">
     {
@@ -33,42 +32,15 @@
         "targetName": "Chord and Scale Understanding"
       },
       "audience": [
-        {
-          "@type": "Audience",
-          "audienceType": "Students"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Teachers"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Professional Musicians"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Songwriters"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Piano Players"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Guitar Players"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Amateur Musicians"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Composers"
-        },
-        {
-          "@type": "Audience",
-          "audienceType": "Music Teachers"
-        }
+        { "@type": "Audience", "audienceType": "Students" },
+        { "@type": "Audience", "audienceType": "Teachers" },
+        { "@type": "Audience", "audienceType": "Professional Musicians" },
+        { "@type": "Audience", "audienceType": "Songwriters" },
+        { "@type": "Audience", "audienceType": "Piano Players" },
+        { "@type": "Audience", "audienceType": "Guitar Players" },
+        { "@type": "Audience", "audienceType": "Amateur Musicians" },
+        { "@type": "Audience", "audienceType": "Composers" },
+        { "@type": "Audience", "audienceType": "Music Teachers" }
       ],
       "featureList": [
         "113 interactive chords for guitar and piano",
@@ -78,12 +50,7 @@
         "Visual Circle of Fifths",
         "Innovative songwriting tools",
         "Seamless support for both piano and guitar"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      ]
     }
   </script>
   <script type="application/ld+json">
@@ -102,288 +69,1334 @@
         "name": "Can I use Chord Colors for both guitar and piano?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! Chord Colors is designed for both guitarists and pianists, offering a wide range of chords and chord progressions for both instruments. It's the perfect tool for songwriters and musicians of all levels."
+          "text": "Yes! Chord Colors is designed for both guitarists and pianists, offering a wide range of chords and chord progressions for both instruments."
         }
       },{
         "@type": "Question",
         "name": "How many chords and scales does Chord Colors offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Chord Colors is packed with musical possibilities: 113 chords, 148 scales, 470 chord progressions, and 1882 guitar chord voicings. It's a vast playground for musical exploration and creativity."
+          "text": "Chord Colors is packed with musical possibilities: 113 chords, 148 scales, 470 chord progressions, and 1882 guitar chord voicings."
         }
       },{
         "@type": "Question",
         "name": "Is Chord Colors suitable for beginners?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely! Chord Colors is designed to be accessible and valuable for all skill levels, from complete beginners to advanced musicians. Its intuitive, visual approach to music theory makes learning enjoyable and less intimidating for newcomers, while still offering depth for even the most experienced players."
+          "text": "Absolutely! Chord Colors is designed to be accessible and valuable for all skill levels, from complete beginners to advanced musicians."
         }
       }]
     }
   </script>
   <meta name="description" content="Unleash your musical potential with Chord Colors, the free app that transforms how you create, learn, and understand music. Perfect for songwriters, guitarists, and pianists of all levels.">
   <meta name="keywords" content="music theory, chord progressions, scales, guitar chords, piano chords, songwriting, music app, visual learning">
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chordcolors.app/">
   <meta property="og:title" content="Chord Colors: Unleash Your Musical Potential | Free Interactive Music Theory App">
   <meta property="og:description" content="Explore music theory with 113 chords, 148 scales, and 470 chord progressions. The ultimate tool for songwriters, guitarists, and pianists of all levels.">
   <meta property="og:image" content="https://chordcolors.app/images/preview.png">
-
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://chordcolors.app/">
   <meta property="twitter:title" content="Chord Colors: Unleash Your Musical Potential | Free Interactive Music Theory App">
   <meta property="twitter:description" content="Explore music theory with 113 chords, 148 scales, and 470 chord progressions. The ultimate tool for songwriters, guitarists, and pianists of all levels.">
   <meta property="twitter:image" content="https://chordcolors.app/images/preview.png">
-
   <link rel="canonical" href="https://chordcolors.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Poppins:wght@300;400;600;700&family=Caveat:wght@700&display=swap">
   <link rel="stylesheet" href="https://use.typekit.net/cwn4bro.css">
-
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const featureBoxes = document.querySelectorAll('.feature-box');
-
-        featureBoxes.forEach(box => {
-            box.addEventListener('mouseenter', function() {
-                const randomRotation = (Math.random() - 0.5) * 2; // Random value between -1 and 1
-                this.style.transform = `translateY(-3px) scale(1.01) rotate(${randomRotation}deg)`;
-                this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.1)';
-            });
-
-            box.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
-                this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-            });
-        });
-    });
-  </script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    /* ── base ── */
     body {
-      /* font-family: 'Avenir', sans-serif; */
       font-family: 'Poppins', sans-serif;
       -webkit-font-smoothing: antialiased;
-      font-size: 17px
+      font-size: 17px;
     }
-    .kansas {
-      font-family: "new-kansas", "Poppins", sans-serif;
+    .kansas { font-family: "new-kansas", "Poppins", sans-serif; }
+
+    /* CSS custom properties used by sim-controls */
+    :root {
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #888888;
+      --text: #333333;
+      --hair: rgba(0, 0, 0, 0.12);
+      --hairHigh: rgba(0, 0, 0, 0.24);
     }
-    #large-logo {
-      width: 100px;
+
+    /* ── App Store badge ── */
+    .app-store-badge {
+      display: inline-block;
+      transition: opacity 0.2s ease;
     }
-    #hero-section {
+    .app-store-badge:hover { opacity: 0.8; }
+    .app-store-badge img { height: 60px; width: auto; display: block; }
+
+    /* ── Phone demo (interactive embed container) ── */
+    .phone-demo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 28px;
+    }
+
+    /* ── PlaySticker ── */
+    .play-sticker {
+      z-index: 7;
+      pointer-events: none;
+      color: oklch(72% 0.2 25);
+      transform: rotate(-2deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 2px;
+    }
+    .play-sticker__text {
+      font-family: 'Caveat', ui-sans-serif, system-ui, cursive;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 0.9;
+      white-space: nowrap;
+    }
+    .play-sticker__arrow {
+      display: block;
+      width: 20px;
+      height: auto;
+      margin: 3px 0 0;
+    }
+
+    /* ── sim-controls ── */
+    .sim-controls {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 0 16px;
+      max-width: 100%;
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    .sim-reset {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--hair);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 18px; line-height: 1;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0;
+      transition: background 120ms ease;
+    }
+    .sim-reset:hover { background: oklch(95% 0 0); }
+    .sim-reset:active { transform: rotate(180deg); transition: transform 240ms ease; }
+    .theme-toggle {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--hair);
+      background: var(--bg);
+      color: var(--ink);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0;
+      transition: background 120ms ease;
+    }
+    .theme-toggle:hover { background: oklch(95% 0 0); }
+    .theme-icon { width: 17px; height: 17px; display: block; }
+    .theme-icon--sun { display: none; }
+    .phone-demo[data-theme='dark'] .theme-icon--moon { display: none; }
+    .phone-demo[data-theme='dark'] .theme-icon--sun { display: block; }
+    .key-picker, .instrument-picker {
+      --current-hue: #ff0000;
       position: relative;
     }
-    /* #hero-bottom {
-      margin: auto;
-      max-width: 1500px;
-    } */
+    .key-picker-trigger, .instrument-picker-trigger {
+      display: inline-flex; align-items: center; gap: 7px;
+      height: 36px; padding: 0 12px; margin: 0;
+      border: 1px solid var(--hair); border-radius: 999px;
+      background: var(--bg); color: var(--ink);
+      font-family: inherit; font-size: 13px; font-weight: 500; letter-spacing: -0.05px;
+      cursor: pointer; white-space: nowrap;
+      transition: background 140ms ease, border-color 140ms ease;
+    }
+    .key-picker-trigger:hover, .instrument-picker-trigger:hover { background: oklch(96.5% 0 0); }
+    .key-picker[data-open='true'] .key-picker-trigger {
+      border-color: color-mix(in oklab, var(--current-hue) 35%, var(--hairHigh) 65%);
+      background: color-mix(in oklab, var(--current-hue) 5%, var(--bg) 95%);
+    }
+    .instrument-picker[data-open='true'] .instrument-picker-trigger {
+      border-color: var(--hairHigh); background: oklch(96.5% 0 0);
+    }
+    .key-picker-trigger-label, .instrument-picker-trigger-label {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px;
+      color: var(--muted); font-weight: 600;
+    }
+    .key-picker-swatch {
+      display: inline-block; width: 11px; height: 11px; border-radius: 50%;
+      background: var(--swatch-color, currentColor);
+      box-shadow: inset 0 0 0 0.5px rgba(0,0,0,0.12);
+    }
+    .key-picker-value, .instrument-picker-value {
+      font-size: 13px; font-weight: 600; letter-spacing: -0.1px; text-align: left; color: var(--ink);
+    }
+    .key-picker-value { min-width: 14px; }
+    .key-picker-caret, .instrument-picker-caret {
+      width: 9px; height: 6px; color: var(--muted); transition: transform 220ms ease;
+    }
+    .key-picker[data-open='true'] .key-picker-caret,
+    .instrument-picker[data-open='true'] .instrument-picker-caret { transform: rotate(180deg); }
+    .key-picker-menu, .instrument-picker-menu {
+      position: absolute; top: calc(100% + 6px); right: 0;
+      min-width: 144px; max-height: 360px; overflow: auto;
+      background: var(--bg); border: 1px solid var(--hair); border-radius: 12px; padding: 4px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.04);
+      opacity: 0; transform: translateY(-4px); pointer-events: none;
+      transition: opacity 160ms ease, transform 160ms ease;
+      list-style: none; margin: 0;
+    }
+    .key-picker[data-open='true'] .key-picker-menu,
+    .instrument-picker[data-open='true'] .instrument-picker-menu {
+      opacity: 1; transform: translateY(0); pointer-events: auto;
+    }
+    .key-picker-option, .instrument-picker-option {
+      --swatch-color: #ff0000;
+      display: flex; align-items: center; gap: 10px;
+      width: 100%; padding: 7px 10px; margin: 0;
+      border: none; border-radius: 8px; background: transparent; color: var(--ink);
+      font-family: inherit; font-size: 13px; font-weight: 500; letter-spacing: -0.1px;
+      cursor: pointer; text-align: left;
+    }
+    .key-picker-option:hover { background: color-mix(in oklab, var(--swatch-color) 8%, var(--bg) 92%); }
+    .key-picker-option[aria-selected='true'] { background: color-mix(in oklab, var(--swatch-color) 16%, var(--bg) 84%); }
+    .instrument-picker-option:hover { background: oklch(96.5% 0 0); }
+    .instrument-picker-option[aria-selected='true'] { background: oklch(93% 0 0); }
+    .key-picker-option-letter, .instrument-picker-option-letter { flex: 1; }
+
+    /* ── phone frame ── */
+    .phone-frame {
+      position: relative;
+      width: min(393px, 100%);
+      aspect-ratio: 9 / 19.5;
+      background: #1a1a1a;
+      border-radius: 52px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.16), 0 0 0 1px rgba(255,255,255,0.06) inset;
+      overflow: hidden;
+    }
+    .phone-iframe {
+      position: absolute;
+      top: calc(14px / 0.9359);
+      left: calc(14px / 0.9359);
+      width: 390px;
+      height: 882px;
+      zoom: 0.9359;
+      border: 0;
+      border-radius: 42px;
+      background: #1a1a1a;
+      pointer-events: auto;
+    }
+    .open-in-browser {
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-top: 16px;
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 13px; font-weight: 600;
+      color: oklch(72% 0.2 25);
+      text-decoration: none; pointer-events: auto;
+    }
+    .open-in-browser:hover { text-decoration: underline; }
+
+    /* ── color wheel ── */
+    .color-wheel-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 48px;
+      max-width: 850px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    .color-wheel-figure { display: contents; }
+    .color-wheel-figure:first-child > .color-wheel-title { grid-column: 1; grid-row: 1; }
+    .color-wheel-figure:first-child > .color-wheel-demo  { grid-column: 1; grid-row: 2; }
+    .color-wheel-figure:first-child > .cw-caption        { grid-column: 1; grid-row: 3; }
+    .color-wheel-figure:last-child  > .color-wheel-title { grid-column: 2; grid-row: 1; }
+    .color-wheel-figure:last-child  > .color-wheel-demo  { grid-column: 2; grid-row: 2; }
+    .color-wheel-figure:last-child  > .cw-caption        { grid-column: 2; grid-row: 3; }
+    .color-wheel-demo {
+      margin: 0; display: flex; justify-content: center;
+    }
+    .color-wheel-demo svg { width: 340px; height: 340px; max-width: 100%; display: block; }
+    .color-wheel-demo .note-label {
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-weight: 700; font-size: 22px;
+      text-anchor: middle; dominant-baseline: central;
+      alignment-baseline: central; text-rendering: geometricPrecision;
+      user-select: none; pointer-events: none;
+    }
+    .color-wheel-title {
+      margin: 0 0 2px; font-size: 17px; font-weight: 600;
+      letter-spacing: -0.1px; text-align: center;
+    }
+    .cw-caption { text-align: center; }
+    .cw-caption p {
+      font-size: 14px; color: #666; margin: 8px 0 0;
+    }
+
+    /* ── feature sections ── */
+    .feature-section {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    .feature-section.reverse { flex-direction: row-reverse; }
+    .feature-text { flex: 1; }
+    .feature-demo { flex-shrink: 0; }
+
+    @media (max-width: 820px) {
+      .feature-section, .feature-section.reverse {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 40px 20px;
+      }
+      /* text always above phone on small screens */
+      .feature-text { order: -1; }
+    }
+
+    /* ── feature bg tinting ── */
     #features {
-      /* border-top: 1px solid #DFD5CB; */
+      --bg-sat: 35%;
+      --bg-l: 96%;
     }
-    #footer-border {
-      border-top: 1px solid #333;
-      width: 40%;
-      margin: auto;
+    .feature-bg-section {
+      background: hsl(var(--section-hue, 0deg), var(--bg-sat), var(--bg-l));
     }
-    #copyright {
-      padding-top: 25px;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-left: auto;
-      margin-right: auto;
+    .features-header {
+      padding: 48px 24px 24px;
+      text-align: center;
+      background: hsl(var(--section-hue, 0deg), var(--bg-sat), var(--bg-l));
     }
-    body {
-        font-family: 'Inter', sans-serif;
+
+    /* ── footer ── */
+    .footer-link {
+      color: #888;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
     }
-    .feature-box {
-        transition: all 0.2s ease-out;
-    }
-    .custom-button {
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .custom-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-    .text-gray-900 {
-        color: #333333 !important;
-    }
-    @media (max-width: 768px) {
-        #hero-section {
-            padding-top: 30px !important;
-        }
-    }
-    @media (max-width: 560px) {
-        #hero-section {
-            padding-top: 20px !important;
-        }
-    }
-    @media (max-width: 340px) {
-        #hero-section {
-            padding-top: 0px !important;
-        }
-    }
+    .footer-link:hover { color: #ccc; }
   </style>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD0CX13QXR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-XD0CX13QXR');
   </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <!-- <header class="container bg-[#FFF9F4] mx-auto px-4 py-6 flex justify-between items-center">
-        <div class="flex items-center justify-center">
-            <div class="flex flex-row justify-center items-center">
-              <span class="font-bold text-2xl text-gray-900">Chord Colors</span>
-            </div>
+<main>
 
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero-section" class="bg-[#FFF9F4] pt-20 pb-10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <img style="width:100px" class="mx-auto mb-8" src="./images/icon-small.png" alt="Chord Colors">
+        <h1 class="kansas text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-gray-900">Explore music theory<br>through color</h1>
+        <p class="text-xl mb-10 text-gray-600">No sheet music. Trust your ear. Learn through exploration.</p>
+        <div class="flex flex-col items-center gap-5">
+          <div class="flex justify-center space-x-4 items-center">
+            <!-- Phone icon -->
+            <svg class="h-10 w-10" width="45.0898438px" height="72.6484375px" viewBox="0 0 45.0898438 72.6484375" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><g transform="translate(0, -0.6699)" fill="#4B5563" fill-rule="nonzero"><path d="M9.5625,73.3183594 C6.70703125,73.3183594 4.39941406,72.4827474 2.63964844,70.8115234 C0.879882812,69.1402995 0,66.921224 0,64.1542969 L0,9.83398437 C0,7.08919271 0.879882812,4.87565104 2.63964844,3.19335938 C4.39941406,1.51106771 6.70703125,0.669921875 9.5625,0.669921875 L35.6933594,0.669921875 C38.5266927,0.669921875 40.8011068,1.51106771 42.5166016,3.19335938 C44.2320964,4.87565104 45.0898438,7.08919271 45.0898438,9.83398437 L45.0898438,64.1542969 C45.0898438,66.8990885 44.2320964,69.1126302 42.5166016,70.7949219 C40.8011068,72.4772135 38.5266927,73.3183594 35.6933594,73.3183594 L9.5625,73.3183594 Z M10.6914063,66.6113281 L34.4648438,66.6113281 C35.7708333,66.6113281 36.7835286,66.2682292 37.5029297,65.5820312 C38.2223307,64.8958333 38.5820312,63.921875 38.5820312,62.6601563 L38.5820312,11.328125 C38.5820312,10.0885417 38.2223307,9.12011719 37.5029297,8.42285156 C36.7835286,7.72558594 35.7708333,7.37695312 34.4648438,7.37695312 L10.6914063,7.37695312 C9.36328125,7.37695312 8.33951823,7.72005208 7.62011719,8.40625 C6.90071615,9.09244792 6.54101562,10.0664062 6.54101562,11.328125 L6.54101562,62.6601563 C6.54101562,63.921875 6.90071615,64.8958333 7.62011719,65.5820312 C8.33951823,66.2682292 9.36328125,66.6113281 10.6914063,66.6113281 Z M15.40625,64.0214844 C14.9414062,64.0214844 14.5429688,63.8665365 14.2109375,63.5566406 C13.8789062,63.2467448 13.7128906,62.8483073 13.7128906,62.3613281 C13.7128906,61.8522135 13.8789062,61.4427083 14.2109375,61.1328125 C14.5429688,60.8229167 14.9414062,60.6679688 15.40625,60.6679688 L29.75,60.6679688 C30.2369792,60.6679688 30.6354167,60.8229167 30.9453125,61.1328125 C31.2552083,61.4427083 31.4101562,61.8522135 31.4101562,62.3613281 C31.4101562,62.8483073 31.2552083,63.2467448 30.9453125,63.5566406 C30.6354167,63.8665365 30.2369792,64.0214844 29.75,64.0214844 L15.40625,64.0214844 Z M18.3945312,14.9472656 C17.6640625,14.9472656 17.0553385,14.703776 16.5683594,14.2167969 C16.0813802,13.7298177 15.8378906,13.1210938 15.8378906,12.390625 C15.8378906,11.6822917 16.0813802,11.0791016 16.5683594,10.5810547 C17.0553385,10.0830078 17.6640625,9.83398438 18.3945312,9.83398438 L26.7285156,9.83398438 C27.436849,9.83398438 28.0400391,10.0830078 28.5380859,10.5810547 C29.0361328,11.0791016 29.2851562,11.6822917 29.2851562,12.390625 C29.2851562,13.1210938 29.0416667,13.7298177 28.5546875,14.2167969 C28.0677083,14.703776 27.4589844,14.9472656 26.7285156,14.9472656 L18.3945312,14.9472656 Z"/></g></g></svg>
+            <!-- iPad icon -->
+            <svg class="h-12 w-12" width="79.2558594px" height="61.9902344px" viewBox="0 0 79.2558594 61.9902344" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><g transform="translate(-0.4668, -0.082)" fill="#4B5563" fill-rule="nonzero"><path d="M11.390625,62.0722656 C7.78255208,62.0722656 5.05989583,61.1591797 3.22265625,59.3330078 C1.38541667,57.5068359 0.466796875,54.8229167 0.466796875,51.28125 L0.466796875,10.8730469 C0.466796875,7.30924479 1.38541667,4.61979167 3.22265625,2.8046875 C5.05989583,0.989583333 7.77148438,0.08203125 11.3574219,0.08203125 L68.7988281,0.08203125 C72.406901,0.08203125 75.1295573,0.989583333 76.9667969,2.8046875 C78.8040365,4.61979167 79.7226562,7.30924479 79.7226562,10.8730469 L79.7226562,51.28125 C79.7226562,54.8229167 78.8040365,57.5068359 76.9667969,59.3330078 C75.1295573,61.1591797 72.406901,62.0722656 68.7988281,62.0722656 L11.390625,62.0722656 Z M11.7558594,55.53125 L68.4335938,55.53125 C69.9609375,55.53125 71.1341146,55.1328125 71.953125,54.3359375 C72.7721354,53.5390625 73.1816406,52.3326823 73.1816406,50.7167969 L73.1816406,11.4042969 C73.1816406,9.81054688 72.7721354,8.61523438 71.953125,7.81835938 C71.1341146,7.02148438 69.9609375,6.62304688 68.4335938,6.62304688 L11.7558594,6.62304688 C10.2063802,6.62304688 9.02766927,7.02148438 8.21972656,7.81835938 C7.41178385,8.61523438 7.0078125,9.81054688 7.0078125,11.4042969 L7.0078125,50.7167969 C7.0078125,52.3326823 7.41731771,53.5390625 8.23632812,54.3359375 C9.05533854,55.1328125 10.2285156,55.53125 11.7558594,55.53125 Z M27.2285156,52.9082031 C26.7415365,52.9082031 26.3486328,52.7587891 26.0498047,52.4599609 C25.7509766,52.1611328 25.6015625,51.7682292 25.6015625,51.28125 C25.6015625,50.7721354 25.7509766,50.3681641 26.0498047,50.0693359 C26.3486328,49.7705078 26.7415365,49.6210938 27.2285156,49.6210938 L52.9609375,49.6210938 C53.4479167,49.6210938 53.8408203,49.7705078 54.1396484,50.0693359 C54.4384766,50.3681641 54.5878906,50.7721354 54.5878906,51.28125 C54.5878906,51.7682292 54.4384766,52.1611328 54.1396484,52.4599609 C53.8408203,52.7587891 53.4479167,52.9082031 52.9609375,52.9082031 L27.2285156,52.9082031 Z"/></g></g></svg>
+          </div>
+          <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441"
+             class="app-store-badge" target="_blank" rel="noopener" aria-label="Download on the App Store">
+            <img src="./images/download_black.svg" alt="Download on the App Store">
+          </a>
         </div>
-        <nav>
-            <a href="#download" class="text-gray-600 hover:text-gray-900 mx-4">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HERO IMAGE
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#FFF9F4]">
+    <img src="./images/hero-bottom.png"
+         srcset="./images/hero-bottom-600.png 600w, ./images/hero-bottom.png 3896w"
+         sizes="100vw"
+         alt="Chord Colors on iPhone showing chords, guitar voicings, progressions, and scales"
+         class="w-full block" width="3896" height="1618" loading="eager" decoding="async">
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LIVE DEMO
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#FFF9F4] py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="kansas text-4xl sm:text-5xl font-bold mb-3 text-gray-900">Try it yourself</h2>
+      <p class="text-gray-500 text-lg mb-8">No download required.</p>
+
+      <div class="phone-demo"
+           data-base="/"
+           data-key="C"
+           data-instrument="keyboard"
+           data-theme="light">
+        <div class="play-sticker" aria-hidden="true">
+          <span class="play-sticker__text">Play with me</span>
+          <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
+            <path d="M19 77 L 12 90 L 5 77"/>
+          </svg>
+        </div>
+        <div class="sim-controls">
+          <div class="instrument-picker" data-open="false">
+            <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
+              <span class="instrument-picker-trigger-label">Instrument</span>
+              <span class="instrument-picker-value">Piano</span>
+              <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
+          </div>
+          <div class="key-picker" data-open="false" style="--current-hue: #FF0000">
+            <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
+              <span class="key-picker-trigger-label">Key</span>
+              <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FF0000"></span>
+              <span class="key-picker-value">C</span>
+              <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+            </button>
+            <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
+          </div>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+              <circle cx="8" cy="8" r="3.2"/>
+              <path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
+            </svg>
+          </button>
+          <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
+        </div>
+        <div class="phone-frame">
+          <iframe class="phone-iframe"
+                  src="https://chordcolors.com/?embed=iphone&skipOnboarding=1&key=C&instrument=keyboard&theme=light"
+                  title="Chord Colors interactive demo"
+                  loading="eager"
+                  allow="autoplay; encrypted-media"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+        </div>
+        <a class="open-in-browser" href="https://chordcolors.com/" target="_blank" rel="noopener">
+          Open in browser <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY CHORD COLORS
+  ═══════════════════════════════════════════ -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto text-center" style="max-width: 50rem;">
+        <h2 class="kansas text-4xl font-bold mb-5 text-gray-900">Why Chord Colors?</h2>
+        <p class="text-gray-600 text-lg leading-relaxed">Chord Colors skips notation because it can get in the way of exploration, creativity, and curiosity. Whether you're an advanced or beginner musician, there's so much packed in here you're guaranteed to learn something new and get inspired.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COLOR SYSTEM
+  ═══════════════════════════════════════════ -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto" style="max-width: 52rem;">
+        <div class="color-wheel-wrapper">
+
+        <div class="color-wheel-figure">
+          <p class="color-wheel-title">Consonant notes are next to each other</p>
+          <div class="color-wheel-demo">
+            <svg viewBox="0 0 400 400" role="img" aria-label="Circle of Fifths with neighboring notes connected by OKLCH-uniform gradients">
+              <defs>
+                <linearGradient id="nb-c-g" x1="200" y1="50" x2="275" y2="70" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#FF0000"/>
+                  <stop offset="14.3%"  stop-color="#FF1D00"/>
+                  <stop offset="28.6%"  stop-color="#FF2C00"/>
+                  <stop offset="42.9%"  stop-color="#FF3800"/>
+                  <stop offset="57.1%"  stop-color="#FF4100"/>
+                  <stop offset="71.4%"  stop-color="#FF4A00"/>
+                  <stop offset="85.7%"  stop-color="#FF5200"/>
+                  <stop offset="100.0%" stop-color="#FF5900"/>
+                </linearGradient>
+                <linearGradient id="nb-g-d" x1="275" y1="70" x2="330" y2="125" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#FF5900"/>
+                  <stop offset="14.3%"  stop-color="#FF6200"/>
+                  <stop offset="28.6%"  stop-color="#FF6A00"/>
+                  <stop offset="42.9%"  stop-color="#FF7200"/>
+                  <stop offset="57.1%"  stop-color="#FF7900"/>
+                  <stop offset="71.4%"  stop-color="#FF8100"/>
+                  <stop offset="85.7%"  stop-color="#FF8800"/>
+                  <stop offset="100.0%" stop-color="#FF8F00"/>
+                </linearGradient>
+                <linearGradient id="nb-d-a" x1="330" y1="125" x2="350" y2="200" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#FF8F00"/>
+                  <stop offset="14.3%"  stop-color="#FF9600"/>
+                  <stop offset="28.6%"  stop-color="#FF9E00"/>
+                  <stop offset="42.9%"  stop-color="#FFA600"/>
+                  <stop offset="57.1%"  stop-color="#FFAD00"/>
+                  <stop offset="71.4%"  stop-color="#FFB500"/>
+                  <stop offset="85.7%"  stop-color="#FFBC00"/>
+                  <stop offset="100.0%" stop-color="#FFC400"/>
+                </linearGradient>
+                <linearGradient id="nb-a-e" x1="350" y1="200" x2="330" y2="275" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#FFC400"/>
+                  <stop offset="14.3%"  stop-color="#FFCC00"/>
+                  <stop offset="28.6%"  stop-color="#FFD400"/>
+                  <stop offset="42.9%"  stop-color="#FFDC00"/>
+                  <stop offset="57.1%"  stop-color="#FFE500"/>
+                  <stop offset="71.4%"  stop-color="#FFED00"/>
+                  <stop offset="85.7%"  stop-color="#FFF600"/>
+                  <stop offset="100.0%" stop-color="#FEFF00"/>
+                </linearGradient>
+                <linearGradient id="nb-e-b" x1="330" y1="275" x2="275" y2="330" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#FEFF00"/>
+                  <stop offset="14.3%"  stop-color="#ECF800"/>
+                  <stop offset="28.6%"  stop-color="#D9F100"/>
+                  <stop offset="42.9%"  stop-color="#C7E900"/>
+                  <stop offset="57.1%"  stop-color="#B4E200"/>
+                  <stop offset="71.4%"  stop-color="#A1DA00"/>
+                  <stop offset="85.7%"  stop-color="#8DD300"/>
+                  <stop offset="100.0%" stop-color="#78CB00"/>
+                </linearGradient>
+                <linearGradient id="nb-b-fs" x1="275" y1="330" x2="200" y2="350" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#78CB00"/>
+                  <stop offset="14.3%"  stop-color="#6EC700"/>
+                  <stop offset="28.6%"  stop-color="#63C400"/>
+                  <stop offset="42.9%"  stop-color="#57C000"/>
+                  <stop offset="57.1%"  stop-color="#4ABD00"/>
+                  <stop offset="71.4%"  stop-color="#3BB900"/>
+                  <stop offset="85.7%"  stop-color="#28B600"/>
+                  <stop offset="100.0%" stop-color="#00B200"/>
+                </linearGradient>
+                <linearGradient id="nb-fs-cs" x1="200" y1="350" x2="125" y2="330" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#00B200"/>
+                  <stop offset="14.3%"  stop-color="#00B550"/>
+                  <stop offset="28.6%"  stop-color="#00B675"/>
+                  <stop offset="42.9%"  stop-color="#00B591"/>
+                  <stop offset="57.1%"  stop-color="#00B3A7"/>
+                  <stop offset="71.4%"  stop-color="#00AFB8"/>
+                  <stop offset="85.7%"  stop-color="#00AAC4"/>
+                  <stop offset="100.0%" stop-color="#00A5CB"/>
+                </linearGradient>
+                <linearGradient id="nb-cs-gs" x1="125" y1="330" x2="70" y2="275" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#00A5CB"/>
+                  <stop offset="14.3%"  stop-color="#009CCA"/>
+                  <stop offset="28.6%"  stop-color="#0093C8"/>
+                  <stop offset="42.9%"  stop-color="#008AC6"/>
+                  <stop offset="57.1%"  stop-color="#0081C4"/>
+                  <stop offset="71.4%"  stop-color="#0077C1"/>
+                  <stop offset="85.7%"  stop-color="#006DBE"/>
+                  <stop offset="100.0%" stop-color="#0063BB"/>
+                </linearGradient>
+                <linearGradient id="nb-gs-ds" x1="70" y1="275" x2="50" y2="200" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#0063BB"/>
+                  <stop offset="14.3%"  stop-color="#005AB9"/>
+                  <stop offset="28.6%"  stop-color="#0050B7"/>
+                  <stop offset="42.9%"  stop-color="#0046B5"/>
+                  <stop offset="57.1%"  stop-color="#003BB3"/>
+                  <stop offset="71.4%"  stop-color="#002EB1"/>
+                  <stop offset="85.7%"  stop-color="#001EAF"/>
+                  <stop offset="100.0%" stop-color="#0800AC"/>
+                </linearGradient>
+                <linearGradient id="nb-ds-as" x1="50" y1="200" x2="70" y2="125" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#0800AC"/>
+                  <stop offset="14.3%"  stop-color="#2100AF"/>
+                  <stop offset="28.6%"  stop-color="#3100B2"/>
+                  <stop offset="42.9%"  stop-color="#3F00B3"/>
+                  <stop offset="57.1%"  stop-color="#4B00B2"/>
+                  <stop offset="71.4%"  stop-color="#5700B1"/>
+                  <stop offset="85.7%"  stop-color="#6300AF"/>
+                  <stop offset="100.0%" stop-color="#6E00AC"/>
+                </linearGradient>
+                <linearGradient id="nb-as-f" x1="70" y1="125" x2="125" y2="70" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#6E00AC"/>
+                  <stop offset="14.3%"  stop-color="#7E00AA"/>
+                  <stop offset="28.6%"  stop-color="#8D00A6"/>
+                  <stop offset="42.9%"  stop-color="#9D00A1"/>
+                  <stop offset="57.1%"  stop-color="#AC009B"/>
+                  <stop offset="71.4%"  stop-color="#BB0093"/>
+                  <stop offset="85.7%"  stop-color="#C9008A"/>
+                  <stop offset="100.0%" stop-color="#D7007F"/>
+                </linearGradient>
+                <linearGradient id="nb-f-c" x1="125" y1="70" x2="200" y2="50" gradientUnits="userSpaceOnUse">
+                  <stop offset="0.0%"   stop-color="#D7007F"/>
+                  <stop offset="14.3%"  stop-color="#DE0075"/>
+                  <stop offset="28.6%"  stop-color="#E5006A"/>
+                  <stop offset="42.9%"  stop-color="#EB005E"/>
+                  <stop offset="57.1%"  stop-color="#F10050"/>
+                  <stop offset="71.4%"  stop-color="#F60040"/>
+                  <stop offset="85.7%"  stop-color="#FB002C"/>
+                  <stop offset="100.0%" stop-color="#FF0000"/>
+                </linearGradient>
+              </defs>
+              <line x1="200" y1="50"  x2="275" y2="70"  stroke="url(#nb-c-g)"   stroke-width="3" stroke-linecap="round"/>
+              <line x1="275" y1="70"  x2="330" y2="125" stroke="url(#nb-g-d)"   stroke-width="3" stroke-linecap="round"/>
+              <line x1="330" y1="125" x2="350" y2="200" stroke="url(#nb-d-a)"   stroke-width="3" stroke-linecap="round"/>
+              <line x1="350" y1="200" x2="330" y2="275" stroke="url(#nb-a-e)"   stroke-width="3" stroke-linecap="round"/>
+              <line x1="330" y1="275" x2="275" y2="330" stroke="url(#nb-e-b)"   stroke-width="3" stroke-linecap="round"/>
+              <line x1="275" y1="330" x2="200" y2="350" stroke="url(#nb-b-fs)"  stroke-width="3" stroke-linecap="round"/>
+              <line x1="200" y1="350" x2="125" y2="330" stroke="url(#nb-fs-cs)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="125" y1="330" x2="70"  y2="275" stroke="url(#nb-cs-gs)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="70"  y1="275" x2="50"  y2="200" stroke="url(#nb-gs-ds)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="50"  y1="200" x2="70"  y2="125" stroke="url(#nb-ds-as)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="70"  y1="125" x2="125" y2="70"  stroke="url(#nb-as-f)"  stroke-width="3" stroke-linecap="round"/>
+              <line x1="125" y1="70"  x2="200" y2="50"  stroke="url(#nb-f-c)"   stroke-width="3" stroke-linecap="round"/>
+              <circle class="note-circle" cx="200" cy="50"  r="34" fill="#FF0000"/>
+              <text   class="note-label"  x="200" y="50" fill="#fff">C</text>
+              <circle class="note-circle" cx="275" cy="70"  r="34" fill="#FF5900"/>
+              <text   class="note-label"  x="275" y="70" fill="#fff">G</text>
+              <circle class="note-circle" cx="330" cy="125" r="34" fill="#FF8F00"/>
+              <text   class="note-label"  x="330" y="125" fill="#111">D</text>
+              <circle class="note-circle" cx="350" cy="200" r="34" fill="#FFC400"/>
+              <text   class="note-label"  x="350" y="200" fill="#111">A</text>
+              <circle class="note-circle" cx="330" cy="275" r="34" fill="#FEFF00"/>
+              <text   class="note-label"  x="330" y="275" fill="#111">E</text>
+              <circle class="note-circle" cx="275" cy="330" r="34" fill="#78CB00"/>
+              <text   class="note-label"  x="275" y="330" fill="#111">B</text>
+              <circle class="note-circle" cx="200" cy="350" r="34" fill="#00B200"/>
+              <text   class="note-label"  x="200" y="350" fill="#111">F&#9839;</text>
+              <circle class="note-circle" cx="125" cy="330" r="34" fill="#00A5CB"/>
+              <text   class="note-label"  x="125" y="330" fill="#111">C&#9839;</text>
+              <circle class="note-circle" cx="70"  cy="275" r="34" fill="#0063BB"/>
+              <text   class="note-label"  x="70"  y="275" fill="#fff">G&#9839;</text>
+              <circle class="note-circle" cx="50"  cy="200" r="34" fill="#0800AC"/>
+              <text   class="note-label"  x="50"  y="200" fill="#fff">D&#9839;</text>
+              <circle class="note-circle" cx="70"  cy="125" r="34" fill="#6E00AC"/>
+              <text   class="note-label"  x="70"  y="125" fill="#fff">A&#9839;</text>
+              <circle class="note-circle" cx="125" cy="70"  r="34" fill="#D7007F"/>
+              <text   class="note-label"  x="125" y="70" fill="#fff">F</text>
+            </svg>
+          </div>
+          <div class="cw-caption"><p>Neighbors are a perfect fifth apart, the most consonant interval in music.</p></div>
+        </div>
+
+        <div class="color-wheel-figure">
+          <p class="color-wheel-title">Dissonant notes are opposite from each other</p>
+          <div class="color-wheel-demo">
+            <svg viewBox="0 0 400 400" role="img" aria-label="Tritone pairs shown as solid-color dashed lines with a one-missing-dash gap at the wheel center">
+              <line x1="200" y1="50"  x2="200.00" y2="175.00" stroke="#FF0000" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="275" y1="70"  x2="212.50" y2="178.33" stroke="#FF5900" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="330" y1="125" x2="221.67" y2="187.50" stroke="#FF8F00" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="350" y1="200" x2="225.00" y2="200.00" stroke="#FFC400" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="330" y1="275" x2="221.67" y2="212.50" stroke="#FEFF00" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="275" y1="330" x2="212.50" y2="221.67" stroke="#78CB00" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="200" y1="350" x2="200.00" y2="225.00" stroke="#00B200" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="125" y1="330" x2="187.50" y2="221.67" stroke="#00A5CB" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="70"  y1="275" x2="178.33" y2="212.50" stroke="#0063BB" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="50"  y1="200" x2="175.00" y2="200.00" stroke="#0800AC" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="70"  y1="125" x2="178.33" y2="187.50" stroke="#6E00AC" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <line x1="125" y1="70"  x2="187.50" y2="178.33" stroke="#D7007F" stroke-width="3" stroke-dasharray="20 15" stroke-linecap="round"/>
+              <circle class="note-circle" cx="200" cy="50"  r="34" fill="#FF0000"/>
+              <text   class="note-label"  x="200" y="50" fill="#fff">C</text>
+              <circle class="note-circle" cx="275" cy="70"  r="34" fill="#FF5900"/>
+              <text   class="note-label"  x="275" y="70" fill="#fff">G</text>
+              <circle class="note-circle" cx="330" cy="125" r="34" fill="#FF8F00"/>
+              <text   class="note-label"  x="330" y="125" fill="#111">D</text>
+              <circle class="note-circle" cx="350" cy="200" r="34" fill="#FFC400"/>
+              <text   class="note-label"  x="350" y="200" fill="#111">A</text>
+              <circle class="note-circle" cx="330" cy="275" r="34" fill="#FEFF00"/>
+              <text   class="note-label"  x="330" y="275" fill="#111">E</text>
+              <circle class="note-circle" cx="275" cy="330" r="34" fill="#78CB00"/>
+              <text   class="note-label"  x="275" y="330" fill="#111">B</text>
+              <circle class="note-circle" cx="200" cy="350" r="34" fill="#00B200"/>
+              <text   class="note-label"  x="200" y="350" fill="#111">F&#9839;</text>
+              <circle class="note-circle" cx="125" cy="330" r="34" fill="#00A5CB"/>
+              <text   class="note-label"  x="125" y="330" fill="#111">C&#9839;</text>
+              <circle class="note-circle" cx="70"  cy="275" r="34" fill="#0063BB"/>
+              <text   class="note-label"  x="70"  y="275" fill="#fff">G&#9839;</text>
+              <circle class="note-circle" cx="50"  cy="200" r="34" fill="#0800AC"/>
+              <text   class="note-label"  x="50"  y="200" fill="#fff">D&#9839;</text>
+              <circle class="note-circle" cx="70"  cy="125" r="34" fill="#6E00AC"/>
+              <text   class="note-label"  x="70"  y="125" fill="#fff">A&#9839;</text>
+              <circle class="note-circle" cx="125" cy="70"  r="34" fill="#D7007F"/>
+              <text   class="note-label"  x="125" y="70" fill="#fff">F</text>
+            </svg>
+          </div>
+          <div class="cw-caption"><p>Notes opposite each other (tritones) on the Circle of Fifths sound most dissonant.</p></div>
+        </div>
+
+        </div><!-- end side-by-side flex -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EXPLORE THE APP
+  ═══════════════════════════════════════════ -->
+  <div id="features">
+    <div class="features-header">
+      <h2 class="kansas text-4xl font-bold text-gray-900">Explore the app</h2>
+    </div>
+
+    <!-- 1: Guitar and Piano -->
+    <section class="feature-bg-section" style="--section-hue: 0deg">
+      <div class="feature-section">
+        <div class="feature-demo">
+          <div class="phone-demo"
+               data-base="/chords"
+               data-key="C"
+               data-default-key="C"
+               data-instrument="keyboard"
+               data-theme="light">
+            <div class="play-sticker" aria-hidden="true">
+              <span class="play-sticker__text">Play with me</span>
+              <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
+                <path d="M19 77 L 12 90 L 5 77"/>
+              </svg>
+            </div>
+            <div class="sim-controls">
+              <div class="instrument-picker" data-open="false">
+                <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
+                  <span class="instrument-picker-trigger-label">Instrument</span>
+                  <span class="instrument-picker-value">Piano</span>
+                  <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
+              </div>
+              <div class="key-picker" data-open="false" style="--current-hue: #FF0000">
+                <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
+                  <span class="key-picker-trigger-label">Key</span>
+                  <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FF0000"></span>
+                  <span class="key-picker-value">C</span>
+                  <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
+              </div>
+              <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
+                <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
+                </svg>
+              </button>
+              <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
+            </div>
+            <div class="phone-frame">
+              <iframe class="phone-iframe"
+                      src="https://chordcolors.com/chords?embed=iphone&skipOnboarding=1&key=C&instrument=keyboard&theme=light"
+                      title="Chord Colors piano and guitar"
+                      loading="lazy"
+                      allow="autoplay; encrypted-media"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+            </div>
+            <a class="open-in-browser" href="https://chordcolors.com/chords" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3 class="kansas text-3xl font-bold mb-3 text-gray-900">Guitar and Piano</h3>
+          <p class="text-gray-600 text-lg">Same color system for both. 113 chords, 1,882 guitar voicings. See every note in context on both instruments.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="height: 6px; background: white;"></div>
+
+    <!-- 2: Chord Progressions -->
+    <section class="feature-bg-section" style="--section-hue: 21deg">
+      <div class="feature-section reverse">
+        <div class="feature-demo">
+          <div class="phone-demo"
+               data-base="/progressions"
+               data-key="G"
+               data-default-key="G"
+               data-instrument="keyboard"
+               data-theme="light">
+            <div class="play-sticker" aria-hidden="true">
+              <span class="play-sticker__text">Play with me</span>
+              <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
+                <path d="M19 77 L 12 90 L 5 77"/>
+              </svg>
+            </div>
+            <div class="sim-controls">
+              <div class="instrument-picker" data-open="false">
+                <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
+                  <span class="instrument-picker-trigger-label">Instrument</span>
+                  <span class="instrument-picker-value">Piano</span>
+                  <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
+              </div>
+              <div class="key-picker" data-open="false" style="--current-hue: #FF5900">
+                <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
+                  <span class="key-picker-trigger-label">Key</span>
+                  <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FF5900"></span>
+                  <span class="key-picker-value">G</span>
+                  <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
+              </div>
+              <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
+                <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
+                </svg>
+              </button>
+              <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
+            </div>
+            <div class="phone-frame">
+              <iframe class="phone-iframe"
+                      src="https://chordcolors.com/progressions?embed=iphone&skipOnboarding=1&key=G&instrument=keyboard&theme=light"
+                      title="Chord Colors progressions"
+                      loading="lazy"
+                      allow="autoplay; encrypted-media"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+            </div>
+            <a class="open-in-browser" href="https://chordcolors.com/progressions" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3 class="kansas text-3xl font-bold mb-3 text-gray-900">Chord Progressions</h3>
+          <p class="text-gray-600 text-lg">470 progressions by genre and length. Tap to hear it, tap the arrow to see how to play it.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="height: 6px; background: white;"></div>
+
+    <!-- 3: Color Wheel -->
+    <section class="feature-bg-section" style="--section-hue: 34deg">
+      <div class="feature-section">
+        <div class="feature-demo">
+          <div class="phone-demo"
+               data-base="/wheel"
+               data-key="D"
+               data-default-key="D"
+               data-instrument="keyboard"
+               data-theme="light">
+            <div class="play-sticker" aria-hidden="true">
+              <span class="play-sticker__text">Play with me</span>
+              <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
+                <path d="M19 77 L 12 90 L 5 77"/>
+              </svg>
+            </div>
+            <div class="sim-controls">
+              <div class="instrument-picker" data-open="false">
+                <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
+                  <span class="instrument-picker-trigger-label">Instrument</span>
+                  <span class="instrument-picker-value">Piano</span>
+                  <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
+              </div>
+              <div class="key-picker" data-open="false" style="--current-hue: #FF8F00">
+                <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
+                  <span class="key-picker-trigger-label">Key</span>
+                  <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FF8F00"></span>
+                  <span class="key-picker-value">D</span>
+                  <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
+              </div>
+              <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
+                <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
+                </svg>
+              </button>
+              <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
+            </div>
+            <div class="phone-frame">
+              <iframe class="phone-iframe"
+                      src="https://chordcolors.com/wheel?embed=iphone&skipOnboarding=1&key=D&instrument=keyboard&theme=light"
+                      title="Chord Colors wheel"
+                      loading="lazy"
+                      allow="autoplay; encrypted-media"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+            </div>
+            <a class="open-in-browser" href="https://chordcolors.com/wheel" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3 class="kansas text-3xl font-bold mb-3 text-gray-900">The Color Wheel</h3>
+          <p class="text-gray-600 text-lg">Every chord that sounds good in your key, laid out visually. Tap any to hear it. There are no wrong answers.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="height: 6px; background: white;"></div>
+
+    <!-- 4: Scales -->
+    <section class="feature-bg-section" style="--section-hue: 46deg">
+      <div class="feature-section reverse">
+        <div class="feature-demo">
+          <div class="phone-demo"
+               data-base="/scales"
+               data-key="A"
+               data-default-key="A"
+               data-instrument="keyboard"
+               data-theme="light">
+            <div class="play-sticker" aria-hidden="true">
+              <span class="play-sticker__text">Play with me</span>
+              <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
+                <path d="M19 77 L 12 90 L 5 77"/>
+              </svg>
+            </div>
+            <div class="sim-controls">
+              <div class="instrument-picker" data-open="false">
+                <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
+                  <span class="instrument-picker-trigger-label">Instrument</span>
+                  <span class="instrument-picker-value">Piano</span>
+                  <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
+              </div>
+              <div class="key-picker" data-open="false" style="--current-hue: #FFC400">
+                <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
+                  <span class="key-picker-trigger-label">Key</span>
+                  <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FFC400"></span>
+                  <span class="key-picker-value">A</span>
+                  <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
+              </div>
+              <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
+                <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
+                </svg>
+              </button>
+              <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
+            </div>
+            <div class="phone-frame">
+              <iframe class="phone-iframe"
+                      src="https://chordcolors.com/scales?embed=iphone&skipOnboarding=1&key=A&instrument=keyboard&theme=light"
+                      title="Chord Colors scales"
+                      loading="lazy"
+                      allow="autoplay; encrypted-media"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+            </div>
+            <a class="open-in-browser" href="https://chordcolors.com/scales" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3 class="kansas text-3xl font-bold mb-3 text-gray-900">Scales</h3>
+          <p class="text-gray-600 text-lg">148 scales from around the world. Pin any scale and see which chords fit instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="height: 6px; background: white;"></div>
+
+    <!-- 5: Saved Chords -->
+    <section class="feature-bg-section" style="--section-hue: 60deg">
+      <div class="feature-section">
+        <div class="feature-demo">
+          <div class="phone-demo"
+               data-base="/saved"
+               data-key="E"
+               data-default-key="E"
+               data-instrument="keyboard"
+               data-theme="light"
+               data-saved-chords='[{"key":"C","suffix":"m9"},{"key":"Eb","suffix":"9"},{"key":"Ab","suffix":"9"},{"key":"G","suffix":"7b5#9"}]'>
+            <div class="play-sticker" aria-hidden="true">
+              <span class="play-sticker__text">Play with me</span>
+              <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
+                <path d="M19 77 L 12 90 L 5 77"/>
+              </svg>
+            </div>
+            <div class="sim-controls">
+              <div class="instrument-picker" data-open="false">
+                <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
+                  <span class="instrument-picker-trigger-label">Instrument</span>
+                  <span class="instrument-picker-value">Piano</span>
+                  <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
+              </div>
+              <div class="key-picker" data-open="false" style="--current-hue: #FEFF00">
+                <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
+                  <span class="key-picker-trigger-label">Key</span>
+                  <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FEFF00"></span>
+                  <span class="key-picker-value">E</span>
+                  <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
+              </div>
+              <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
+                <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
+                </svg>
+              </button>
+              <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
+            </div>
+            <div class="phone-frame">
+              <iframe class="phone-iframe"
+                      src="https://chordcolors.com/saved?embed=iphone&skipOnboarding=1&key=E&instrument=keyboard&theme=light&savedChords=%5B%7B%22key%22%3A%22C%22%2C%22suffix%22%3A%22m9%22%7D%2C%7B%22key%22%3A%22Eb%22%2C%22suffix%22%3A%229%22%7D%2C%7B%22key%22%3A%22Ab%22%2C%22suffix%22%3A%229%22%7D%2C%7B%22key%22%3A%22G%22%2C%22suffix%22%3A%227b5%239%22%7D%5D"
+                      title="Chord Colors saved chords"
+                      loading="lazy"
+                      allow="autoplay; encrypted-media"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+            </div>
+            <a class="open-in-browser" href="https://chordcolors.com/saved" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3 class="kansas text-3xl font-bold mb-3 text-gray-900">Saved Chords</h3>
+          <p class="text-gray-600 text-lg">Build your progression as you write. Transpose everything to a new key with one tap.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════
+       DOWNLOAD CTA
+  ═══════════════════════════════════════════ -->
+  <section style="background: white; padding: 64px 24px; text-align: center;">
+    <h2 class="kansas" style="color: #111827; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin: 0 0 16px;">Start exploring music your way</h2>
+    <p style="color: #6b7280; font-size: 1.125rem; margin: 0 0 36px; font-family: 'Inter', sans-serif;">Free download. No sheet music required.</p>
+    <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441" target="_blank" rel="noopener">
+      <img src="./images/download_black.svg" alt="Download on the App Store" style="height: 72px; display: inline-block;">
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer style="background: white;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 32px 40px 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="./images/icon-small.png" alt="Chord Colors icon" style="height: 32px; width: 32px; border-radius: 8px;">
+          <span style="color: #111; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: -0.01em;">Chord Colors</span>
+        </div>
+        <nav style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+          <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441" target="_blank" rel="noopener" style="color: #6b7280; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px;">Download</a>
+          <a href="#features" style="color: #6b7280; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px;">Features</a>
+          <a href="https://chordcolors.app/privacy" target="_blank" rel="noopener" style="color: #6b7280; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px;">Privacy Policy</a>
+          <a href="mailto:support@serendipityapps.com" style="color: #6b7280; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px;">Support</a>
         </nav>
-    </header> -->
-
-    <main>
-        <section id="hero-section" class="bg-[#FFF9F4] pt-20">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <img id="large-logo" class="mx-auto mb-8" src="./images/icon-small.png" class="mb-2">
-                    <h1 class="kansas text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-gray-900">Learn music theory<br />like the pros</h1>
-                    <p class="text-xl mb-10 text-gray-600">No sheet music. Trust your ear. Learn through exploration.</p>
-                    <div class="flex justify-center space-x-4">
-                        <!-- <a href="https://itunes.apple.com/app/id1422598441" class="custom-button bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 font-bold text-xl">
-                            Download Now
-                        </a> -->
-                        <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441" class="custom-button bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 font-bold text-xl">
-                          Download
-                        </a>
-                        <a href="#features" class="custom-button bg-white text-gray-800 font-semibold py-3 px-8 border border-gray-300 rounded-full transition duration-300 font-bold text-xl">
-                            Features
-                        </a>
-                    </div>
-                    <div class="mt-8 flex justify-center space-x-4 items-center">
-                        <!-- iPhone Icon --> <svg class="h-10 w-10 icon" width="45.0898438px" height="72.6484375px" viewBox="0 0 45.0898438 72.6484375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="General-Assets" fill-rule="evenodd"> <g transform="translate(0, -0.6699)" fill="#4B5563" fill-rule="nonzero"> <path d="M9.5625,73.3183594 C6.70703125,73.3183594 4.39941406,72.4827474 2.63964844,70.8115234 C0.879882812,69.1402995 0,66.921224 0,64.1542969 L0,9.83398437 C0,7.08919271 0.879882812,4.87565104 2.63964844,3.19335938 C4.39941406,1.51106771 6.70703125,0.669921875 9.5625,0.669921875 L35.6933594,0.669921875 C38.5266927,0.669921875 40.8011068,1.51106771 42.5166016,3.19335938 C44.2320964,4.87565104 45.0898438,7.08919271 45.0898438,9.83398437 L45.0898438,64.1542969 C45.0898438,66.8990885 44.2320964,69.1126302 42.5166016,70.7949219 C40.8011068,72.4772135 38.5266927,73.3183594 35.6933594,73.3183594 L9.5625,73.3183594 Z M10.6914063,66.6113281 L34.4648438,66.6113281 C35.7708333,66.6113281 36.7835286,66.2682292 37.5029297,65.5820312 C38.2223307,64.8958333 38.5820312,63.921875 38.5820312,62.6601563 L38.5820312,11.328125 C38.5820312,10.0885417 38.2223307,9.12011719 37.5029297,8.42285156 C36.7835286,7.72558594 35.7708333,7.37695312 34.4648438,7.37695312 L10.6914063,7.37695312 C9.36328125,7.37695312 8.33951823,7.72005208 7.62011719,8.40625 C6.90071615,9.09244792 6.54101562,10.0664062 6.54101562,11.328125 L6.54101562,62.6601563 C6.54101562,63.921875 6.90071615,64.8958333 7.62011719,65.5820312 C8.33951823,66.2682292 9.36328125,66.6113281 10.6914063,66.6113281 Z M15.40625,64.0214844 C14.9414062,64.0214844 14.5429688,63.8665365 14.2109375,63.5566406 C13.8789062,63.2467448 13.7128906,62.8483073 13.7128906,62.3613281 C13.7128906,61.8522135 13.8789062,61.4427083 14.2109375,61.1328125 C14.5429688,60.8229167 14.9414062,60.6679688 15.40625,60.6679688 L29.75,60.6679688 C30.2369792,60.6679688 30.6354167,60.8229167 30.9453125,61.1328125 C31.2552083,61.4427083 31.4101562,61.8522135 31.4101562,62.3613281 C31.4101562,62.8483073 31.2552083,63.2467448 30.9453125,63.5566406 C30.6354167,63.8665365 30.2369792,64.0214844 29.75,64.0214844 L15.40625,64.0214844 Z M18.3945312,14.9472656 C17.6640625,14.9472656 17.0553385,14.703776 16.5683594,14.2167969 C16.0813802,13.7298177 15.8378906,13.1210938 15.8378906,12.390625 C15.8378906,11.6822917 16.0813802,11.0791016 16.5683594,10.5810547 C17.0553385,10.0830078 17.6640625,9.83398438 18.3945312,9.83398438 L26.7285156,9.83398438 C27.436849,9.83398438 28.0400391,10.0830078 28.5380859,10.5810547 C29.0361328,11.0791016 29.2851562,11.6822917 29.2851562,12.390625 C29.2851562,13.1210938 29.0416667,13.7298177 28.5546875,14.2167969 C28.0677083,14.703776 27.4589844,14.9472656 26.7285156,14.9472656 L18.3945312,14.9472656 Z" id="Shape"></path> </g> </g> </svg>
-
-                        <!-- iPad --> <svg class="h-12 w-12 icon" width="79.2558594px" height="61.9902344px" viewBox="0 0 79.2558594 61.9902344" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="General-Assets" fill-rule="evenodd"> <g transform="translate(-0.4668, -0.082)" fill="#4B5563" fill-rule="nonzero"> <path d="M11.390625,62.0722656 C7.78255208,62.0722656 5.05989583,61.1591797 3.22265625,59.3330078 C1.38541667,57.5068359 0.466796875,54.8229167 0.466796875,51.28125 L0.466796875,10.8730469 C0.466796875,7.30924479 1.38541667,4.61979167 3.22265625,2.8046875 C5.05989583,0.989583333 7.77148438,0.08203125 11.3574219,0.08203125 L68.7988281,0.08203125 C72.406901,0.08203125 75.1295573,0.989583333 76.9667969,2.8046875 C78.8040365,4.61979167 79.7226562,7.30924479 79.7226562,10.8730469 L79.7226562,51.28125 C79.7226562,54.8229167 78.8040365,57.5068359 76.9667969,59.3330078 C75.1295573,61.1591797 72.406901,62.0722656 68.7988281,62.0722656 L11.390625,62.0722656 Z M11.7558594,55.53125 L68.4335938,55.53125 C69.9609375,55.53125 71.1341146,55.1328125 71.953125,54.3359375 C72.7721354,53.5390625 73.1816406,52.3326823 73.1816406,50.7167969 L73.1816406,11.4042969 C73.1816406,9.81054688 72.7721354,8.61523438 71.953125,7.81835938 C71.1341146,7.02148438 69.9609375,6.62304688 68.4335938,6.62304688 L11.7558594,6.62304688 C10.2063802,6.62304688 9.02766927,7.02148438 8.21972656,7.81835938 C7.41178385,8.61523438 7.0078125,9.81054688 7.0078125,11.4042969 L7.0078125,50.7167969 C7.0078125,52.3326823 7.41731771,53.5390625 8.23632812,54.3359375 C9.05533854,55.1328125 10.2285156,55.53125 11.7558594,55.53125 Z M27.2285156,52.9082031 C26.7415365,52.9082031 26.3486328,52.7587891 26.0498047,52.4599609 C25.7509766,52.1611328 25.6015625,51.7682292 25.6015625,51.28125 C25.6015625,50.7721354 25.7509766,50.3681641 26.0498047,50.0693359 C26.3486328,49.7705078 26.7415365,49.6210938 27.2285156,49.6210938 L52.9609375,49.6210938 C53.4479167,49.6210938 53.8408203,49.7705078 54.1396484,50.0693359 C54.4384766,50.3681641 54.5878906,50.7721354 54.5878906,51.28125 C54.5878906,51.7682292 54.4384766,52.1611328 54.1396484,52.4599609 C53.8408203,52.7587891 53.4479167,52.9082031 52.9609375,52.9082031 L27.2285156,52.9082031 Z" id="Shape"></path> </g> </g> </svg>
-                    </div>
-                  </div>
-                </div>
-            <img id="hero-bottom" src="./images/hero-bottom.png" srcset="./images/hero-bottom-600.png 600w, ./images/hero-bottom.png 3896w" sizes="(max-width: 1200px)" class="mx-auto pt-10 mb-0 pb-0" width="3896" height="1618" loading="lazy" decoding="async">
-        </section>
-
-        <section id="features" class="bg-[#FFF5EC] py-20">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-8 text-center kansas">Compose Visually</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="feature-box bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600">
-                        <h3 class="font-bold text-xl mb-4">🎹 Endless Chord Possibilities</h3>
-                        <p class="text-gray-600">Discover 113 interactive chords and 1882 guitar voicings. Break out of your comfort zone and find your unique sound.</p>
-                    </div>
-                    <div class="feature-box bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-600">
-                        <h3 class="font-bold text-xl mb-4">🎼 Colorful Scale Explorer</h3>
-                        <p class="text-gray-600">Dive into 148 scales from around the world. Create melodies that stand out.</p>
-                    </div>
-                    <div class="feature-box bg-white rounded-lg shadow-lg p-6 border-l-4 border-yellow-500">
-                        <h3 class="font-bold text-xl mb-4">🎶 Inspiring Progressions</h3>
-                        <p class="text-gray-600">Discover 470 chord progressions organized by genre or length to kickstart your songwriting. Create and share your own unique progressions.</p>
-                    </div>
-                    <div class="feature-box bg-white rounded-lg shadow-lg p-6 border-l-4 border-red-600">
-                        <h3 class="font-bold text-xl mb-4">🎸 Visual Music Theory</h3>
-                        <p class="text-gray-600">Learn music theory intuitively with our color-coded system. No need for traditional notation – perfect for visual learners!</p>
-                    </div>
-                    <div class="feature-box bg-white rounded-lg shadow-lg p-6 border-l-4 border-purple-600">
-                        <h3 class="font-bold text-xl mb-4">✍️ Songwriting Toolkit</h3>
-                        <p class="text-gray-600">Find matching chords and scales, experiment with borrowed chords, and train your ear. Your complete songwriting companion.</p>
-                    </div>
-                    <div class="feature-box bg-white rounded-lg shadow-lg p-6 border-l-4 border-indigo-600">
-                        <h3 class="font-bold text-xl mb-4">🌈 Intuitive Design</h3>
-                        <p class="text-gray-600">Color-coded notes make complex music theory accessible and fun. Gain a deeper understanding of harmony by noticing patterns.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-[#2762AF] py-24 text-white">
-          <div class="container mx-auto px-4 text-center">
-              <h2 class="text-5xl font-bold mb-8 kansas">Understand Music<br />on a Deeper Level</h2>
-              <!-- <p class="text-2xl mb-10">Join thousands of musicians who've unlocked their potential with Chord Colors.</p> -->
-              <!-- <a href="https://itunes.apple.com/app/id1422598441" class="custom-button bg-white text-[#2762AF] font-bold py-5 px-10 rounded-full transition duration-300 inline-block text-xl">
-                  Download Now
-              </a> -->
-              <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441" class="custom-button bg-white text-[#2762AF] font-bold py-5 px-10 rounded-full transition duration-300 inline-block text-xl">
-                Download
-              </a>
-          </div>
-      </section>
-
-        <section id="blog" class="bg-[#FFF9F4] py-20">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-12 text-center kansas">Blog</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-blue-600 flex">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="font-bold text-xl mb-2">9 Chord Progressions Every Musician Should Know</h3>
-                            <p class="text-gray-600 mb-4">Discover essential chord progressions that will enhance your songwriting and improvisation skills across various musical genres.</p>
-                            <div class="flex-1 text-sm">&nbsp;</div>
-                            <a href="./blog/common-chord-progressions.html" class="text-blue-600 hover:text-blue-800 font-semibold">Read More →</a>
-                        </div>
-                    </article>
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-green-600 flex">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="font-bold text-xl mb-2">11 Ear Training Exercises to Improve Your Musical Skills</h3>
-                            <p class="text-gray-600 mb-4">Enhance your ability to recognize chords, intervals, and melodies with these practical ear training techniques.</p>
-                            <div class="flex-1 text-sm">&nbsp;</div>
-                            <a href="./blog/ear-training-exercises.html" class="text-blue-600 hover:text-blue-800 font-semibold">Read More →</a>
-                        </div>
-                    </article>
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-purple-600 flex">
-                        <div class="p-6 flex flex-col flex-1">
-                            <h3 class="font-bold text-xl mb-2">Explore Borrowed Chords</h3>
-                            <p class="text-gray-600 mb-4">Learn how to use the Chord Colors app to experiment with borrowed chords and expand your harmonic palette.</p>
-                            <div class="flex-1 text-sm">&nbsp;</div>
-                            <a href="./blog/learn-borrowed-chords.html" class="text-blue-600 hover:text-blue-800 font-semibold">Read More →</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white py-8">
-      <div class="container mx-auto px-4 mb-4">
-          <div class="flex flex-wrap justify-between items-center">
-              <div class="w-full md:w-auto mb-4 md:mb-0 justify-center items-center text-center">
-                <div class="flex flex-row justify-center items-center mb-2 font-bold">
-                  <img src="./images/logo_header_final.png" alt="Chord Colors Logo" class="h-12 w-12 mr-1"> Chord Colors
-                </div>
-                  <!-- <img src="./images/logo_footer.png" alt="Chord Colors Logo" class="h-8 mb-2"> -->
-
-              </div>
-              <div class="w-full md:w-auto flex flex-wrap justify-center md:justify-end">
-                <!-- <a href="https://itunes.apple.com/app/id1422598441" class="text-gray-400 hover:text-white mx-3 my-1">Download</a> -->
-                  <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441" class="text-gray-400 hover:text-white mx-3 my-1">
-                    Download
-                  </a>
-                  <a href="#features" class="text-gray-400 hover:text-white mx-3 my-1">Features</a>
-                  <a href="./privacy.html" class="text-gray-400 hover:text-white mx-3 my-1">Privacy Policy</a>
-                  <a href="./support.html" class="text-gray-400 hover:text-white mx-3 my-1">Support</a>
-              </div>
-          </div>
       </div>
-      <div class="flex justify-center align-center bo" id="footer-border"></div>
-      <div class="flex justify-center align-center bo" id="copyright">
-        <p class="text-sm text-gray-400">© 2025 Serendipity Apps LLC. All rights reserved</p>
+      <div style="border-top: 1px solid #e5e7eb; margin-top: 32px; padding: 20px 0; text-align: center;">
+        <p style="color: #9ca3af; font-family: 'Inter', sans-serif; font-size: 13px; margin: 0;">© 2025 Serendipity Apps LLC. All rights reserved &middot; <a href="https://rossmiller.dev" target="_blank" rel="noopener" style="color: #9ca3af; text-decoration: none;">Created by Ross Miller</a></p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // ── phone-fit: adjust zoom + offsets to the actual frame width ──────────────
+  function fitPhones() {
+    document.querySelectorAll('.phone-frame').forEach(function(frame) {
+      var iframe = frame.querySelector('iframe.phone-iframe');
+      if (!iframe) return;
+      var w = frame.clientWidth;
+      if (!w) return;
+      var bezel = 14;
+      var zoom = (w - 2 * bezel) / 390;
+      iframe.style.zoom = zoom;
+      iframe.style.top = (bezel / zoom) + 'px';
+      iframe.style.left = (bezel / zoom) + 'px';
+    });
+  }
+
+  // ── sim-controls ─────────────────────────────────────────────────────────────
+  var CHORD_COLORS_ORIGIN = 'https://chordcolors.com';
+
+  var KEYS = [
+    { code: 'C',  label: 'C',  hex: '#FF0000', wire: 'C',  hue: 0,   alts: ['B#'] },
+    { code: 'Cs', label: 'C♯', hex: '#00A5CB', wire: 'C#', hue: 191, alts: ['Db'] },
+    { code: 'D',  label: 'D',  hex: '#FF8F00', wire: 'D',  hue: 34,  alts: [] },
+    { code: 'Ds', label: 'E♭', hex: '#0800AC', wire: 'Eb', hue: 243, alts: ['D#'] },
+    { code: 'E',  label: 'E',  hex: '#FEFF00', wire: 'E',  hue: 60,  alts: ['Fb'] },
+    { code: 'F',  label: 'F',  hex: '#D7007F', wire: 'F',  hue: 325, alts: ['E#'] },
+    { code: 'Fs', label: 'F♯', hex: '#00B200', wire: 'F#', hue: 120, alts: ['Gb'] },
+    { code: 'G',  label: 'G',  hex: '#FF5900', wire: 'G',  hue: 21,  alts: [] },
+    { code: 'Gs', label: 'G♯', hex: '#0063BB', wire: 'G#', hue: 208, alts: ['Ab'] },
+    { code: 'A',  label: 'A',  hex: '#FFC400', wire: 'A',  hue: 46,  alts: [] },
+    { code: 'As', label: 'A♯', hex: '#6E00AC', wire: 'A#', hue: 278, alts: ['Bb'] },
+    { code: 'B',  label: 'B',  hex: '#78CB00', wire: 'B',  hue: 85,  alts: ['Cb'] },
+  ];
+
+  var INSTRUMENT_LABELS = { guitar: 'Guitar', keyboard: 'Piano' };
+
+  function findKey(code) {
+    for (var i = 0; i < KEYS.length; i++) { if (KEYS[i].code === code) return KEYS[i]; }
+    return KEYS[0];
+  }
+
+  function findKeyByWire(wire) {
+    var w = wire.trim().toLowerCase();
+    for (var i = 0; i < KEYS.length; i++) {
+      var k = KEYS[i];
+      if (k.wire.toLowerCase() === w) return k;
+      for (var j = 0; j < k.alts.length; j++) { if (k.alts[j].toLowerCase() === w) return k; }
+    }
+    return null;
+  }
+
+  function buildSrc(base, key, instrument, theme, pinnedScale, savedChords) {
+    var k = findKey(key);
+    var params = 'embed=iphone&skipOnboarding=1' +
+      '&key=' + encodeURIComponent(k.wire) +
+      '&instrument=' + (instrument === 'guitar' ? 'guitar' : 'keyboard') +
+      '&theme=' + (theme === 'dark' ? 'dark' : 'light');
+    if (pinnedScale !== undefined && pinnedScale !== null && pinnedScale !== '') {
+      params += '&pinnedScale=' + encodeURIComponent(pinnedScale);
+    }
+    if (savedChords !== undefined && savedChords !== null && savedChords !== '') {
+      params += '&savedChords=' + encodeURIComponent(savedChords);
+    }
+    return CHORD_COLORS_ORIGIN + base + '?' + params;
+  }
+
+  function paintKey(demo, key) {
+    var picker = demo.querySelector('.key-picker');
+    if (!picker) return;
+    picker.style.setProperty('--current-hue', key.hex);
+    var swatch = picker.querySelector('.key-picker-trigger .key-picker-swatch');
+    if (swatch) swatch.style.setProperty('--swatch-color', key.hex);
+    var valueEl = picker.querySelector('.key-picker-value');
+    if (valueEl) valueEl.textContent = key.label;
+    picker.querySelectorAll('.key-picker-option').forEach(function(opt) {
+      opt.setAttribute('aria-selected', opt.dataset.code === key.code ? 'true' : 'false');
+    });
+    var section = demo.closest('.feature-bg-section');
+    if (section) section.style.setProperty('--section-hue', (key.hue || 0) + 'deg');
+  }
+
+  function paintInstrument(demo, value) {
+    var picker = demo.querySelector('.instrument-picker');
+    if (!picker) return;
+    var valueEl = picker.querySelector('.instrument-picker-value');
+    if (valueEl) valueEl.textContent = INSTRUMENT_LABELS[value] || value;
+    picker.querySelectorAll('.instrument-picker-option').forEach(function(opt) {
+      opt.setAttribute('aria-selected', opt.dataset.value === value ? 'true' : 'false');
+    });
+  }
+
+  function paintTheme(demo, value) {
+    var toggle = demo.querySelector('.theme-toggle');
+    if (toggle) toggle.setAttribute('aria-pressed', value === 'dark' ? 'true' : 'false');
+  }
+
+  function postToApp(demo, payload) {
+    var iframe = demo.querySelector('iframe');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage({ chordcolors: payload }, '*');
+    }
+  }
+
+  function applyKey(demo, code) {
+    var key = findKey(code);
+    demo.dataset.key = key.code;
+    paintKey(demo, key);
+    postToApp(demo, { key: key.wire });
+  }
+
+  function applyInstrument(demo, value) {
+    demo.dataset.instrument = value;
+    paintInstrument(demo, value);
+    postToApp(demo, { instrument: value === 'guitar' ? 'guitar' : 'keyboard' });
+  }
+
+  function applyTheme(demo, value) {
+    demo.dataset.theme = value;
+    paintTheme(demo, value);
+    postToApp(demo, { theme: value === 'dark' ? 'dark' : 'light' });
+  }
+
+  function resetDemo(demo) {
+    var base = demo.dataset.base;
+    if (!base) return;
+    var key = demo.dataset.defaultKey || 'C', instrument = 'keyboard', theme = 'light';
+    demo.dataset.key = key;
+    demo.dataset.instrument = instrument;
+    demo.dataset.theme = theme;
+    paintKey(demo, findKey(key));
+    paintInstrument(demo, instrument);
+    paintTheme(demo, theme);
+    var iframe = demo.querySelector('iframe');
+    if (!iframe) return;
+    var src = buildSrc(base, key, instrument, theme, demo.dataset.pinnedScale, demo.dataset.savedChords);
+    iframe.src = src + '&_r=' + Date.now();
+  }
+
+  function buildKeyMenu(demo) {
+    var menu = demo.querySelector('.key-picker-menu');
+    if (!menu || menu.children.length) return;
+    menu.innerHTML = KEYS.map(function(k) {
+      return '<button type="button" class="key-picker-option" role="option" data-code="' + k.code + '" style="--swatch-color: ' + k.hex + '" aria-selected="false">' +
+        '<span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: ' + k.hex + '"></span>' +
+        '<span class="key-picker-option-letter">' + k.label + '</span>' +
+        '</button>';
+    }).join('');
+  }
+
+  function buildInstrumentMenu(demo) {
+    var menu = demo.querySelector('.instrument-picker-menu');
+    if (!menu || menu.children.length) return;
+    menu.innerHTML = ['keyboard', 'guitar'].map(function(v) {
+      return '<button type="button" class="instrument-picker-option" role="option" data-value="' + v + '" aria-selected="false">' +
+        '<span class="instrument-picker-option-letter">' + INSTRUMENT_LABELS[v] + '</span>' +
+        '</button>';
+    }).join('');
+  }
+
+  function initDemo(demo) {
+    if (!demo) return;
+    buildKeyMenu(demo);
+    buildInstrumentMenu(demo);
+    paintKey(demo, findKey(demo.dataset.key || 'C'));
+    paintInstrument(demo, demo.dataset.instrument || 'keyboard');
+    paintTheme(demo, demo.dataset.theme || 'light');
+  }
+
+  function initAll() {
+    document.querySelectorAll('.phone-demo[data-base]').forEach(initDemo);
+  }
+
+  function closeAllPickers() {
+    document.querySelectorAll('.key-picker[data-open="true"], .instrument-picker[data-open="true"]')
+      .forEach(function(p) {
+        p.dataset.open = 'false';
+        var trigger = p.querySelector('[aria-expanded]');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+  }
+
+  function togglePicker(picker, trigger) {
+    var demo = picker.closest('.phone-demo');
+    if (demo) initDemo(demo);
+    var wasOpen = picker.dataset.open === 'true';
+    closeAllPickers();
+    if (!wasOpen) {
+      picker.dataset.open = 'true';
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  function findDemoBySource(source) {
+    if (!source) return null;
+    var demos = document.querySelectorAll('.phone-demo[data-base]');
+    for (var i = 0; i < demos.length; i++) {
+      var iframe = demos[i].querySelector('iframe');
+      if (iframe && iframe.contentWindow === source) return demos[i];
+    }
+    return null;
+  }
+
+  var handlersAttached = false;
+
+  function attachHandlers() {
+    if (handlersAttached) return;
+    handlersAttached = true;
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if (target.closest('.sim-reset')) {
+        var demo = target.closest('.phone-demo');
+        if (demo) resetDemo(demo);
+        return;
+      }
+      if (target.closest('.theme-toggle')) {
+        var demo = target.closest('.phone-demo');
+        if (demo) {
+          var current = demo.dataset.theme || 'light';
+          applyTheme(demo, current === 'dark' ? 'light' : 'dark');
+        }
+        return;
+      }
+      var keyTrigger = target.closest('.key-picker-trigger');
+      if (keyTrigger) {
+        var picker = keyTrigger.closest('.key-picker');
+        if (picker) togglePicker(picker, keyTrigger);
+        return;
+      }
+      var instTrigger = target.closest('.instrument-picker-trigger');
+      if (instTrigger) {
+        var picker = instTrigger.closest('.instrument-picker');
+        if (picker) togglePicker(picker, instTrigger);
+        return;
+      }
+      var keyOption = target.closest('.key-picker-option');
+      if (keyOption) {
+        var demo = keyOption.closest('.phone-demo');
+        if (demo) applyKey(demo, keyOption.dataset.code || 'C');
+        closeAllPickers();
+        return;
+      }
+      var instOption = target.closest('.instrument-picker-option');
+      if (instOption) {
+        var demo = instOption.closest('.phone-demo');
+        if (demo) applyInstrument(demo, instOption.dataset.value || 'keyboard');
+        closeAllPickers();
+        return;
+      }
+      if (!target.closest('.key-picker') && !target.closest('.instrument-picker')) {
+        closeAllPickers();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeAllPickers();
+    });
+
+    window.addEventListener('message', function(e) {
+      if (e.origin !== CHORD_COLORS_ORIGIN) return;
+      var data = e.data;
+      if (!data || typeof data !== 'object') return;
+      var payload = data.chordcolors;
+      if (!payload || typeof payload !== 'object') return;
+      var demo = findDemoBySource(e.source);
+      if (!demo) return;
+      if (typeof payload.key === 'string') {
+        var k = findKeyByWire(payload.key);
+        if (k) { demo.dataset.key = k.code; paintKey(demo, k); }
+      }
+      if (typeof payload.instrument === 'string') {
+        var inst = payload.instrument === 'guitar' ? 'guitar'
+          : (payload.instrument === 'keyboard' || payload.instrument === 'piano') ? 'keyboard' : null;
+        if (inst) { demo.dataset.instrument = inst; paintInstrument(demo, inst); }
+      }
+      if (typeof payload.theme === 'string') {
+        var theme = payload.theme === 'dark' ? 'dark' : payload.theme === 'light' ? 'light' : null;
+        if (theme) { demo.dataset.theme = theme; paintTheme(demo, theme); }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    fitPhones();
+    attachHandlers();
+    initAll();
+  });
+
+  window.addEventListener('resize', fitPhones);
+</script>
+</body>
 </html>
