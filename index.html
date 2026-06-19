@@ -389,6 +389,8 @@
       transition: color 0.2s;
     }
     .footer-link:hover { color: #ccc; }
+    .footer-credit { color: #9ca3af; text-decoration: underline; transition: color 0.2s; }
+    .footer-credit:hover { color: #374151; }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -875,71 +877,7 @@
 
     <div style="height: 6px; background: white;"></div>
 
-    <!-- 3: Color Wheel -->
-    <section class="feature-bg-section" style="--section-hue: 34deg">
-      <div class="feature-section">
-        <div class="feature-demo">
-          <div class="phone-demo"
-               data-base="/wheel"
-               data-key="D"
-               data-default-key="D"
-               data-instrument="keyboard"
-               data-theme="light">
-            <div class="play-sticker" aria-hidden="true">
-              <span class="play-sticker__text">Play with me</span>
-              <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M30 4 C 38 31.5, 12 40.5, 12 90"/>
-                <path d="M19 77 L 12 90 L 5 77"/>
-              </svg>
-            </div>
-            <div class="sim-controls">
-              <div class="instrument-picker" data-open="false">
-                <button class="instrument-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose instrument">
-                  <span class="instrument-picker-trigger-label">Instrument</span>
-                  <span class="instrument-picker-value">Piano</span>
-                  <svg class="instrument-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-                </button>
-                <div class="instrument-picker-menu" role="listbox" aria-label="Instrument"></div>
-              </div>
-              <div class="key-picker" data-open="false" style="--current-hue: #FF8F00">
-                <button class="key-picker-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose key">
-                  <span class="key-picker-trigger-label">Key</span>
-                  <span class="key-picker-swatch" aria-hidden="true" style="--swatch-color: #FF8F00"></span>
-                  <span class="key-picker-value">D</span>
-                  <svg class="key-picker-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-                </button>
-                <div class="key-picker-menu" role="listbox" aria-label="Key"></div>
-              </div>
-              <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">
-                <svg class="theme-icon theme-icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 1.5A6.5 6.5 0 1 0 14.5 10 5 5 0 0 1 6 1.5z"/></svg>
-                <svg class="theme-icon theme-icon--sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
-                  <circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/>
-                </svg>
-              </button>
-              <button class="sim-reset" type="button" aria-label="Reset simulator" title="Reset">&#8635;</button>
-            </div>
-            <div class="phone-frame">
-              <iframe class="phone-iframe"
-                      src="https://chordcolors.com/wheel?embed=iphone&skipOnboarding=1&key=D&instrument=keyboard&theme=light"
-                      title="Chord Colors wheel"
-                      loading="lazy"
-                      allow="autoplay; encrypted-media"
-                      referrerpolicy="no-referrer-when-downgrade"
-                      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
-            </div>
-            <a class="open-in-browser" href="https://chordcolors.com/wheel" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div class="feature-text">
-          <h3 class="kansas text-3xl font-bold mb-3 text-gray-900">The Color Wheel</h3>
-          <p class="text-gray-600 text-lg">Every chord that sounds good in your key, laid out visually. Tap any to hear it. There are no wrong answers.</p>
-        </div>
-      </div>
-    </section>
-
-    <div style="height: 6px; background: white;"></div>
-
-    <!-- 4: Scales -->
+    <!-- 3: Scales -->
     <section class="feature-bg-section" style="--section-hue: 46deg">
       <div class="feature-section reverse">
         <div class="feature-demo">
@@ -1013,7 +951,7 @@
                data-default-key="E"
                data-instrument="keyboard"
                data-theme="light"
-               data-saved-chords='[{"key":"C","suffix":"m9"},{"key":"Eb","suffix":"9"},{"key":"Ab","suffix":"9"},{"key":"G","suffix":"7b5#9"}]'>
+               data-saved-chords='[{"key":"E","suffix":"m9"},{"key":"A","suffix":"9"},{"key":"D","suffix":"9"},{"key":"B","suffix":"7b5#9"}]'>
             <div class="play-sticker" aria-hidden="true">
               <span class="play-sticker__text">Play with me</span>
               <svg class="play-sticker__arrow" viewBox="0 0 38 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -1049,7 +987,7 @@
             </div>
             <div class="phone-frame">
               <iframe class="phone-iframe"
-                      src="https://chordcolors.com/saved?embed=iphone&skipOnboarding=1&key=E&instrument=keyboard&theme=light&savedChords=%5B%7B%22key%22%3A%22C%22%2C%22suffix%22%3A%22m9%22%7D%2C%7B%22key%22%3A%22Eb%22%2C%22suffix%22%3A%229%22%7D%2C%7B%22key%22%3A%22Ab%22%2C%22suffix%22%3A%229%22%7D%2C%7B%22key%22%3A%22G%22%2C%22suffix%22%3A%227b5%239%22%7D%5D"
+                      src="https://chordcolors.com/saved?embed=iphone&skipOnboarding=1&key=E&header=1&instrument=keyboard&theme=light&savedChords=%5B%7B%22key%22%3A%22E%22%2C%22suffix%22%3A%22m9%22%7D%2C%7B%22key%22%3A%22A%22%2C%22suffix%22%3A%229%22%7D%2C%7B%22key%22%3A%22D%22%2C%22suffix%22%3A%229%22%7D%2C%7B%22key%22%3A%22B%22%2C%22suffix%22%3A%227b5%239%22%7D%5D"
                       title="Chord Colors saved chords"
                       loading="lazy"
                       allow="autoplay; encrypted-media"
@@ -1100,7 +1038,7 @@
         </nav>
       </div>
       <div style="border-top: 1px solid #e5e7eb; margin-top: 32px; padding: 20px 0; text-align: center;">
-        <p style="color: #9ca3af; font-family: 'Inter', sans-serif; font-size: 13px; margin: 0;">© 2025 Serendipity Apps LLC. All rights reserved &middot; <a href="https://rossmiller.dev" target="_blank" rel="noopener" style="color: #9ca3af; text-decoration: none;">Created by Ross Miller</a></p>
+        <p style="color: #9ca3af; font-family: 'Inter', sans-serif; font-size: 13px; margin: 0;">© 2025 Serendipity Apps LLC. All rights reserved &middot; <a href="https://rossmiller.dev" target="_blank" rel="noopener" class="footer-credit">Created by Ross Miller</a></p>
       </div>
     </div>
   </footer>
