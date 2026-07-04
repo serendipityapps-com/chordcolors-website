@@ -59,4 +59,4 @@ Built 2026-07-04. Everything here is ready to execute solo. Files:
   chordcolors.com web app repo)
 - Product Hunt / Show HN launch (do it a week AFTER the ratings improve — you only launch once)
 
-*Files are untracked in git — `git add marketing/ && git commit` to keep them.*
+*Files are untracked in git — `git add marketing/creator-outreach && git commit` to keep them.*
