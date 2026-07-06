@@ -135,6 +135,71 @@
     .app-store-badge:hover { opacity: 0.8; }
     .app-store-badge img { height: 60px; width: auto; display: block; }
 
+    /* ── Hero CTAs ── */
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 8px;
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+    }
+    .hero-cta:hover { transform: translateY(-1px); }
+    .hero-cta:focus-visible {
+      outline: 3px solid rgba(17, 24, 39, 0.22);
+      outline-offset: 3px;
+    }
+    .hero-cta svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+    .hero-cta--primary {
+      background: #111827;
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18);
+    }
+    .hero-cta--primary:hover {
+      background: #000000;
+      color: #ffffff;
+      box-shadow: 0 14px 30px rgba(17, 24, 39, 0.2);
+    }
+    .hero-cta--secondary {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid rgba(17, 24, 39, 0.16);
+      box-shadow: 0 8px 18px rgba(17, 24, 39, 0.08);
+    }
+    .hero-cta--secondary:hover {
+      background: #fffdfb;
+      color: #111827;
+      border-color: rgba(17, 24, 39, 0.28);
+      box-shadow: 0 12px 26px rgba(17, 24, 39, 0.1);
+    }
+
+    @media (max-width: 520px) {
+      .hero-cta-group { width: 100%; }
+      .hero-cta {
+        width: min(100%, 320px);
+        min-height: 50px;
+      }
+    }
+
     /* ── Phone demo (interactive embed container) ── */
     .phone-demo {
       display: flex;
@@ -419,10 +484,22 @@
             <!-- iPad icon -->
             <svg class="h-12 w-12" width="79.2558594px" height="61.9902344px" viewBox="0 0 79.2558594 61.9902344" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><g transform="translate(-0.4668, -0.082)" fill="#4B5563" fill-rule="nonzero"><path d="M11.390625,62.0722656 C7.78255208,62.0722656 5.05989583,61.1591797 3.22265625,59.3330078 C1.38541667,57.5068359 0.466796875,54.8229167 0.466796875,51.28125 L0.466796875,10.8730469 C0.466796875,7.30924479 1.38541667,4.61979167 3.22265625,2.8046875 C5.05989583,0.989583333 7.77148438,0.08203125 11.3574219,0.08203125 L68.7988281,0.08203125 C72.406901,0.08203125 75.1295573,0.989583333 76.9667969,2.8046875 C78.8040365,4.61979167 79.7226562,7.30924479 79.7226562,10.8730469 L79.7226562,51.28125 C79.7226562,54.8229167 78.8040365,57.5068359 76.9667969,59.3330078 C75.1295573,61.1591797 72.406901,62.0722656 68.7988281,62.0722656 L11.390625,62.0722656 Z M11.7558594,55.53125 L68.4335938,55.53125 C69.9609375,55.53125 71.1341146,55.1328125 71.953125,54.3359375 C72.7721354,53.5390625 73.1816406,52.3326823 73.1816406,50.7167969 L73.1816406,11.4042969 C73.1816406,9.81054688 72.7721354,8.61523438 71.953125,7.81835938 C71.1341146,7.02148438 69.9609375,6.62304688 68.4335938,6.62304688 L11.7558594,6.62304688 C10.2063802,6.62304688 9.02766927,7.02148438 8.21972656,7.81835938 C7.41178385,8.61523438 7.0078125,9.81054688 7.0078125,11.4042969 L7.0078125,50.7167969 C7.0078125,52.3326823 7.41731771,53.5390625 8.23632812,54.3359375 C9.05533854,55.1328125 10.2285156,55.53125 11.7558594,55.53125 Z M27.2285156,52.9082031 C26.7415365,52.9082031 26.3486328,52.7587891 26.0498047,52.4599609 C25.7509766,52.1611328 25.6015625,51.7682292 25.6015625,51.28125 C25.6015625,50.7721354 25.7509766,50.3681641 26.0498047,50.0693359 C26.3486328,49.7705078 26.7415365,49.6210938 27.2285156,49.6210938 L52.9609375,49.6210938 C53.4479167,49.6210938 53.8408203,49.7705078 54.1396484,50.0693359 C54.4384766,50.3681641 54.5878906,50.7721354 54.5878906,51.28125 C54.5878906,51.7682292 54.4384766,52.1611328 54.1396484,52.4599609 C53.8408203,52.7587891 53.4479167,52.9082031 52.9609375,52.9082031 L27.2285156,52.9082031 Z"/></g></g></svg>
           </div>
-          <a href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441"
-             class="app-store-badge" target="_blank" rel="noopener" aria-label="Download on the App Store">
-            <img src="./images/download_black.svg" alt="Download on the App Store">
-          </a>
+          <div class="hero-cta-group" aria-label="Choose a Chord Colors version">
+            <a class="hero-cta hero-cta--primary" href="https://chordcolors.com/" target="_blank" rel="noopener">
+              Try web version
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 15 15 5"/>
+                <path d="M8 5h7v7"/>
+              </svg>
+            </a>
+            <a class="hero-cta hero-cta--secondary" href="https://apps.apple.com/us/app/chord-colors-piano-and-guitar/id1422598441" target="_blank" rel="noopener">
+              iOS app
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M13.95 10.62c-.02-2.03 1.66-3.01 1.74-3.06-.95-1.38-2.42-1.57-2.93-1.59-1.24-.13-2.44.74-3.07.74-.64 0-1.61-.72-2.66-.7-1.36.02-2.63.81-3.33 2.05-1.43 2.48-.36 6.12 1.01 8.12.68.98 1.47 2.08 2.52 2.04 1.02-.04 1.4-.65 2.63-.65 1.22 0 1.57.65 2.64.63 1.1-.02 1.78-.98 2.43-1.97.78-1.12 1.1-2.22 1.11-2.28-.02-.01-2.06-.79-2.09-3.33z"/>
+                <path d="M11.95 4.66c.55-.69.92-1.63.82-2.59-.8.04-1.79.55-2.36 1.23-.51.61-.97 1.59-.85 2.51.9.07 1.82-.46 2.39-1.15z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
