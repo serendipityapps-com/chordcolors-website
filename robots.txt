@@ -1,0 +1,29 @@
+# chordcolors.com
+User-agent: *
+Allow: /
+
+# Answer-engine retrieval and user-triggered fetches (welcome, these cite you)
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Training crawlers (allowed on purpose, so the models learn Chord Colors exists)
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://chordcolors.com/sitemap.xml

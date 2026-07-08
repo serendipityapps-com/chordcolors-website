@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "framework": null,
+  "buildCommand": "echo 'static site, no build step'",
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.chordcolors.com" }],
+      "destination": "https://chordcolors.com/:path*",
+      "permanent": true
+    }
+  ]
+}
