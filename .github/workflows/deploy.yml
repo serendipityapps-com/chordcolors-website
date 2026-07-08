@@ -1,0 +1,30 @@
+name: Deploy content to Cloudflare Pages
+
+# Auto-deploys chordcolors.com on every push to master.
+# Today the site is static, so we just strip the internal-only folders and ship
+# the files to the chordcolors-web Pages project. When this becomes an Astro
+# project, add a Node setup + `yarn install` + `yarn build` before the deploy and
+# change the deploy path from "." to the build output (e.g. "dist").
+# Needs one repo secret: CLOUDFLARE_API_TOKEN (Cloudflare Pages: Edit).
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-web
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Strip internal-only files
+        run: rm -rf marketing scripts .claude .vercel .github
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: dddf6e1ca25547618362695749eac254
+          command: pages deploy . --project-name=chordcolors-web --branch=main
