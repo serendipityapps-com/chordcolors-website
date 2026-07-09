@@ -1,0 +1,24 @@
+# Cloudflare Pages redirects for chordcolors.com
+#
+# Before the app moved to a subdomain, the web app lived at chordcolors.com/<route>.
+# It now lives at app.chordcolors.com, so old links (for example the 2022
+# r/musictheory launch post) to the app routes returned 404. These rules 301 the
+# old app paths to app.chordcolors.com, preserving the path and query string.
+# Marketing pages (/, /privacy, /support, /terms, /blog, and static assets) are
+# intentionally left alone.
+
+/chords            https://app.chordcolors.com/chords              301
+/chords/*          https://app.chordcolors.com/chords/:splat       301
+/scales            https://app.chordcolors.com/scales              301
+/scales/*          https://app.chordcolors.com/scales/:splat       301
+/progressions      https://app.chordcolors.com/progressions        301
+/progressions/*    https://app.chordcolors.com/progressions/:splat 301
+/progression/*     https://app.chordcolors.com/progression/:splat  301
+/wheel             https://app.chordcolors.com/wheel               301
+/wheel/*           https://app.chordcolors.com/wheel/:splat        301
+/saved             https://app.chordcolors.com/saved               301
+/saved/*           https://app.chordcolors.com/saved/:splat        301
+/settings          https://app.chordcolors.com/settings            301
+/settings/*        https://app.chordcolors.com/settings/:splat     301
+/help              https://app.chordcolors.com/help                301
+/help/*            https://app.chordcolors.com/help/:splat         301
