@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | Chord Colors</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/images/icon-small.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+  <style>
+    :root { --ink: #1a1a2e; --muted: #6b7280; --bg: #ffffff; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 460px; }
+    .dots { display: flex; gap: 8px; justify-content: center; margin-bottom: 40px; }
+    .dots span {
+      width: 16px; height: 16px; border-radius: 50%;
+      animation: rise 1.8s ease-in-out infinite;
+    }
+    @keyframes rise { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .code { font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    h1 { font-size: 34px; font-weight: 700; line-height: 1.15; margin: 14px 0 12px; }
+    p { font-size: 17px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 32px; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 16px;
+      color: #fff; background: var(--ink); padding: 14px 30px; border-radius: 999px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(26,26,46,0.18); }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #f5f5fa; --muted: #9aa0ac; --bg: #12121c; }
+      .btn { color: #12121c; background: #f5f5fa; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="dots" aria-hidden="true">
+      <span style="background:#ff3333"></span>
+      <span style="background:#ff8a33; animation-delay:.1s"></span>
+      <span style="background:#ffc233; animation-delay:.2s"></span>
+      <span style="background:#e0e033; animation-delay:.3s"></span>
+      <span style="background:#33cc66; animation-delay:.4s"></span>
+      <span style="background:#33cccc; animation-delay:.5s"></span>
+      <span style="background:#3399ff; animation-delay:.6s"></span>
+      <span style="background:#6366f1; animation-delay:.7s"></span>
+      <span style="background:#a855f7; animation-delay:.8s"></span>
+      <span style="background:#de2e96; animation-delay:.9s"></span>
+    </div>
+    <div class="code">404</div>
+    <h1>This note isn't in the scale.</h1>
+    <p>The page you're looking for doesn't exist. Head back and keep exploring the colors of music theory.</p>
+    <a class="btn" href="/">Back to Chord Colors</a>
+  </main>
+</body>
+</html>
