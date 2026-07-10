@@ -48,5 +48,5 @@ jobs:
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}')
           echo "$resp"
-          echo "$resp" | grep -q '"success":true' || { echo "Cache purge failed"; exit 1; }
+          echo "$resp" | grep -qE '"success":[[:space:]]*true' || { echo "Cache purge failed"; exit 1; }
           echo "Cloudflare edge cache purged."

@@ -67,7 +67,7 @@ resp="$(curl -fsS -X PUT \
   --data @"$payload")"
 
 echo "$resp"
-echo "$resp" | grep -q '"success":true' || { echo "FAILED to install cache rule"; exit 1; }
+echo "$resp" | grep -qE '"success":[[:space:]]*true' || { echo "FAILED to install cache rule"; exit 1; }
 echo
 echo "Cache rule installed on zone chordcolors.com."
 echo "Warm it up, then verify a HIT:"
