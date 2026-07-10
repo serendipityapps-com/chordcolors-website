@@ -28,3 +28,25 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: dddf6e1ca25547618362695749eac254
           command: pages deploy . --project-name=chordcolors-web --branch=main
+
+      # Purge the Cloudflare edge cache so this deploy goes live immediately.
+      # HTML is cached aggressively at the edge (see scripts/setup-cloudflare-cache.sh),
+      # so without this a release would not appear until the edge TTL expired.
+      # Skips gracefully until the CLOUDFLARE_CACHE_TOKEN secret exists
+      # (Zone chordcolors.com -> Cache Purge).
+      - name: Purge Cloudflare edge cache
+        env:
+          CF_CACHE_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_TOKEN }}
+        run: |
+          if [ -z "$CF_CACHE_TOKEN" ]; then
+            echo "CLOUDFLARE_CACHE_TOKEN not set; skipping cache purge."
+            exit 0
+          fi
+          resp=$(curl -fsS -X POST \
+            "https://api.cloudflare.com/client/v4/zones/fd5d5aa36a799afac2e20ffa025d33f2/purge_cache" \
+            -H "Authorization: Bearer $CF_CACHE_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+          echo "$resp"
+          echo "$resp" | grep -q '"success":true' || { echo "Cache purge failed"; exit 1; }
+          echo "Cloudflare edge cache purged."
