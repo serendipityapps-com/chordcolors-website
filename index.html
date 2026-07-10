@@ -344,11 +344,15 @@
     }
     .phone-iframe {
       position: absolute;
-      top: calc(14px / 0.9359);
-      left: calc(14px / 0.9359);
+      top: 14px;
+      left: 14px;
       width: 390px;
       height: 882px;
-      zoom: 0.9359;
+      /* Render the app at a fixed 390px "iPhone" width, then scale the whole
+         iframe down to the frame. transform:scale (not zoom) so it works in
+         WebKit/iOS Safari, where CSS zoom on iframes is unreliable. */
+      transform: scale(0.9359);
+      transform-origin: 0 0;
       border: 0;
       border-radius: 42px;
       background: #1a1a1a;
@@ -1126,10 +1130,10 @@
       var w = frame.clientWidth;
       if (!w) return;
       var bezel = 14;
-      var zoom = (w - 2 * bezel) / 390;
-      iframe.style.zoom = zoom;
-      iframe.style.top = (bezel / zoom) + 'px';
-      iframe.style.left = (bezel / zoom) + 'px';
+      var scale = (w - 2 * bezel) / 390;
+      // transform-origin is top-left, so the 14px top/left inset from CSS
+      // stays put and the scaled iframe lands at [14, w-14] horizontally.
+      iframe.style.transform = 'scale(' + scale + ')';
     });
   }
 
